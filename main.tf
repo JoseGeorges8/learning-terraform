@@ -37,10 +37,10 @@ module "blog_sg" {
   vpc_id = data.aws_vps.default.id
   
   ingress_rules = ["http-80-tcp", "https-443-tcp"]
-  ingress_cdir_blocks = ["0.0.0.0/0"]
+  ingress_cidr_blocks = ["0.0.0.0/0"]
 
   egress_rules = ["all-all"]
-  egress_cdir_blocks = ["0.0.0.0/0"]
+  egress_cidr_blocks = ["0.0.0.0/0"]
 }
 
 # Old way without the module creating our own resources
